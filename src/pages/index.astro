@@ -24,30 +24,30 @@ import iconVisual from '../assets/images/icon-visual.svg';
 			<div id="reaction" class="item">
 				<div class="left">
 					<Image src={iconReaction} alt="reaction icon" />
-					<p>Reaction</p>
+					<p class="title">Reaction</p>
 				</div>
 				<p>80/100</p>
 			</div>
-			<div id="reaction" class="item">
+			<div id="memory" class="item">
 				<div class="left">
-					<Image src={iconReaction} alt="reaction icon" />
-					<p>Reaction</p>
+					<Image src={iconMemory} alt="memory icon" />
+					<p class="title">Memory</p>
 				</div>
-				<p>80/100</p>
+				<p>92/100</p>
 			</div>
-			<div id="reaction" class="item">
+			<div id="verbal" class="item">
 				<div class="left">
-					<Image src={iconReaction} alt="reaction icon" />
-					<p>Reaction</p>
+					<Image src={iconVerbal} alt="verbal icon" />
+					<p class="title">Verbal</p>
 				</div>
-				<p>80/100</p>
+				<p>61/100</p>
 			</div>
-			<div id="reaction" class="item">
+			<div id="visual" class="item">
 				<div class="left">
-					<Image src={iconReaction} alt="reaction icon" />
-					<p>Reaction</p>
+					<Image src={iconVisual} alt="visual icon" />
+					<p class="title">Visual</p>
 				</div>
-				<p>80/100</p>
+				<p>72/100</p>
 			</div>
 			<button>Continue</button>
 		</section>
@@ -138,6 +138,34 @@ import iconVisual from '../assets/images/icon-visual.svg';
 
 			#reaction {
 				background-color: rgba(255, 87, 87, 0.15);
+
+				.title {
+					color: rgba(255, 87, 87);
+				}
+			}
+
+			#memory {
+				background-color: #FFB01F26;
+
+				.title {
+					color: #FFB01F;
+				}
+			}
+
+			#verbal {
+				background-color: #00BD9126;
+
+				.title {
+					color: #00BD91;
+				}
+			}
+
+			#visual {
+				background-color: var(--Cobalt-blue);
+
+				.title {
+					color: #1125D4;
+				}
 			}
 
 			.item {
@@ -148,7 +176,7 @@ import iconVisual from '../assets/images/icon-visual.svg';
 				margin-left : 1rem;
 				margin-top : .5rem;
 				margin-bottom: .5rem;
-				padding : .5rem;
+				padding : .65rem;
 				padding-top : 1rem;
 				padding-bottom : 1rem;
 
@@ -163,14 +191,14 @@ import iconVisual from '../assets/images/icon-visual.svg';
 				}
 
 				p {
-					font-size : 1.2rem;
+					font-size : 1.05rem;
 				}
 			}
 
 			button {
 				width : 90%;
 				display: block;
-				margin-top : .75rem;
+				margin-top : 1.25rem;
 				margin-bottom: .75rem;
 				justify-items: flex-end;
 				margin-left: 1rem;
