@@ -11,7 +11,7 @@ import Layout from '../layout/layout.astro';
 				<p class="score__max">of 100</p>
 			</div>
 			<h2>Great</h2>
-			<p>You scored higher than 65% of the people who have taken these tests.</p>
+			<p class="desc">You scored higher than 65% of the people who have taken these tests.</p>
 		</section>
 		<section class="summary">
 			<h1>Summary</h1>
@@ -32,7 +32,7 @@ import Layout from '../layout/layout.astro';
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: space-evenly;
+			justify-content: center;
 			border-radius: 2rem;
 			text-align: center;
 
@@ -46,6 +46,9 @@ import Layout from '../layout/layout.astro';
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+
+				margin-top : .5rem;
+				margin-bottom: .5rem;
 
 				&__value {
 					color: var(--Pale-blue);
@@ -63,6 +66,26 @@ import Layout from '../layout/layout.astro';
 				text-align: center;
 				color: var(--Light-lavender);
 				font-size : 1.4rem;
+				margin-top : .75rem;
+				margin-bottom: .75rem;
+			}
+
+			h2 {
+				width : 100%;
+				text-align: center;
+				color: var(--Pale-blue);
+				font-size : 2rem;
+				margin-top : .75rem;
+				margin-bottom: .75rem;
+			}
+
+			.desc {
+				color: var(--Light-lavender);
+				text-align: center;
+				max-width: 70%;
+				margin-top : .75rem;
+				margin-bottom: .75rem;
+				font-size : 1.1rem;
 			}
 		}
 
