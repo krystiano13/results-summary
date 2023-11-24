@@ -63,6 +63,15 @@ import iconVisual from '../assets/images/icon-visual.svg';
 		box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 		border-radius: 2rem;
 
+		@media screen and (max-width : 800px) and (orientation: portrait) {
+			width : 100vw;
+			height : 100vh;
+			min-height: 30rem;
+			flex-direction: column;
+			border-top-left-radius: 0rem;
+			border-top-right-radius: 0rem;
+		}
+
 		.result {
 			width : 50%;
 			background: linear-gradient(0deg,var(--Light-royal-blue),var(--Light-slate-blue));
@@ -72,6 +81,13 @@ import iconVisual from '../assets/images/icon-visual.svg';
 			justify-content: center;
 			border-radius: 2rem;
 			text-align: center;
+
+			@media screen and (max-width : 800px) and (orientation: portrait) {
+				width : 100%;
+				border-top-left-radius: 0rem;
+				border-top-right-radius: 0rem;
+				padding-bottom: 1rem;
+			}
 
 			.score {
 				background: linear-gradient(0deg,transparent, var(--Violet-blue));
