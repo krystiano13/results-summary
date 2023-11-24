@@ -1,0 +1,154 @@
+---
+import {Image} from 'astro:assets';
+import {summaryData} from "./summaryData";
+---
+
+<section class="summary">
+    <h1>Summary</h1>
+    {
+        summaryData.map(item => (
+                <div id={item.id} class="item">
+                    <div class="left">
+                        <Image src={item.src} alt={item.alt}/>
+                        <p class="title">{item.title}</p>
+                    </div>
+                    <p><span>{item.score.toString()}</span>/100</p>
+                </div>
+        ))
+        }
+        <button>Continue</button>
+        </section>
+        <style lang="scss">
+          .summary {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+
+            @media screen and (max-width: 800px) and (orientation: portrait) {
+              width: 100%;
+              border-top-left-radius: 0rem;
+              border-top-right-radius: 0rem;
+              padding-bottom: 1rem;
+              height: 55%;
+              justify-content: center;
+              align-items: center;
+            }
+
+            h1 {
+              width: 100%;
+              margin-left: 1rem;
+              margin-top: 2.5rem;
+              margin-bottom: .75rem;
+              color: var(--Dark-gray-blue);
+
+              @media screen and (orientation: portrait) {
+                width: 90%;
+              }
+
+              @media screen and (max-width: 600px) {
+                margin-top: 0rem;
+                margin-bottom: 0rem;
+                font-size: 1.1rem;
+                width: 90%;
+              }
+            }
+
+            #reaction {
+              background-color: rgba(255, 87, 87, 0.15);
+
+              .title {
+                color: rgba(255, 87, 87);
+              }
+            }
+
+            #memory {
+              background-color: #FFB01F26;
+
+              .title {
+                color: #FFB01F;
+              }
+            }
+
+            #verbal {
+              background-color: #00BD9126;
+
+              .title {
+                color: #00BD91;
+              }
+            }
+
+            #visual {
+              background-color: var(--Cobalt-blue);
+
+              .title {
+                color: #1125D4;
+              }
+            }
+
+            .item {
+              width: 90%;
+              display: flex;
+              justify-content: space-between;
+              border-radius: 1rem;
+              margin-left: 1rem;
+              margin-top: .5rem;
+              margin-bottom: .5rem;
+              padding: .65rem;
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+
+              @media screen and (max-width: 600px) {
+                margin-top: 0.5rem;
+                margin-bottom: 0.25rem;
+                padding: .5rem;
+                padding-top: .8rem;
+                padding-bottom: .8rem;
+                margin-left: 0rem;
+              }
+
+              .left {
+                display: flex;
+                align-items: center;
+
+                p {
+                  font-size: 1.1rem;
+                  margin-left: .25rem;
+
+                  @media screen and (max-width: 600px) {
+                    font-size: 1rem;
+                  }
+                }
+              }
+
+              p {
+                font-size: 1.05rem;
+
+                span {
+                  font-weight: 800;
+                }
+              }
+            }
+
+            button {
+              width: 90%;
+              display: block;
+              margin-top: 1.25rem;
+              margin-bottom: .75rem;
+              justify-items: flex-end;
+              margin-left: 1rem;
+              padding: 1rem;
+              border-radius: 2rem;
+              color: var(--Pale-blue);
+              background: var(--Dark-gray-blue);
+              border: none;
+              font-size: 1rem;
+              font-weight: 700;
+              cursor: pointer;
+            }
+
+            button:hover {
+              background: linear-gradient(0deg, var(--Light-royal-blue), var(--Light-slate-blue));
+            }
+          }
+        </style>
