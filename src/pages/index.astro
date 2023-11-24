@@ -13,11 +13,62 @@ import Layout from '../layout/layout.astro';
 			<h2>Great</h2>
 			<p>You scored higher than 65% of the people who have taken these tests.</p>
 		</section>
-		<section class="summary"></section>
+		<section class="summary">
+			<h1>Summary</h1>
+		</section>
 	</main>
 </Layout>
 
-<style>
+<style lang="scss">
+	main {
+		display: flex;
+		width : 45rem;
+		height : 30rem;
+		font-family: 'Hanken Grotesk', sans-serif;
 
+		.result {
+			width : 50%;
+			background: linear-gradient(0deg,var(--Light-royal-blue),var(--Light-slate-blue));
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+			border-radius: 2rem;
+			text-align: center;
+
+			.score {
+				background: linear-gradient(0deg,transparent, var(--Violet-blue));
+				border-radius: 100%;
+				width : 12rem;
+				height : 12rem;
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				&__value {
+					color: var(--Pale-blue);
+					font-weight: 800;
+					font-size: 4rem;
+				}
+
+				&__max {
+					color: var(--Light-lavender);
+				}
+			}
+
+			h1 {
+				width : 100%;
+				text-align: center;
+				color: var(--Light-lavender);
+				font-size : 1.4rem;
+			}
+		}
+
+		.summary {
+			width : 50%;
+		}
+	}
 </style>
 
