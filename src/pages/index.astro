@@ -1,5 +1,11 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '../layout/layout.astro';
+import iconMemory from '../assets/images/icon-memory.svg';
+import iconReaction from '../assets/images/icon-reaction.svg';
+import iconVerbal from '../assets/images/icon-verbal.svg';
+import iconVisual from '../assets/images/icon-visual.svg';
 ---
 
 <Layout>
@@ -15,6 +21,35 @@ import Layout from '../layout/layout.astro';
 		</section>
 		<section class="summary">
 			<h1>Summary</h1>
+			<div id="reaction" class="item">
+				<div class="left">
+					<Image src={iconReaction} alt="reaction icon" />
+					<p>Reaction</p>
+				</div>
+				<p>80/100</p>
+			</div>
+			<div id="reaction" class="item">
+				<div class="left">
+					<Image src={iconReaction} alt="reaction icon" />
+					<p>Reaction</p>
+				</div>
+				<p>80/100</p>
+			</div>
+			<div id="reaction" class="item">
+				<div class="left">
+					<Image src={iconReaction} alt="reaction icon" />
+					<p>Reaction</p>
+				</div>
+				<p>80/100</p>
+			</div>
+			<div id="reaction" class="item">
+				<div class="left">
+					<Image src={iconReaction} alt="reaction icon" />
+					<p>Reaction</p>
+				</div>
+				<p>80/100</p>
+			</div>
+			<button>Continue</button>
 		</section>
 	</main>
 </Layout>
@@ -91,6 +126,63 @@ import Layout from '../layout/layout.astro';
 
 		.summary {
 			width : 50%;
+			display: flex;
+			flex-direction: column;
+
+			h1 {
+				width : 100%;
+				margin-left : 1rem;
+				margin-top : 2.5rem;
+				margin-bottom: .75rem;
+			}
+
+			#reaction {
+				background-color: rgba(255, 87, 87, 0.15);
+			}
+
+			.item {
+				width : 90%;
+				display: flex;
+				justify-content: space-between;
+				border-radius: 1rem;
+				margin-left : 1rem;
+				margin-top : .5rem;
+				margin-bottom: .5rem;
+				padding : .5rem;
+				padding-top : 1rem;
+				padding-bottom : 1rem;
+
+				.left {
+					display: flex;
+					align-items: center;
+
+					p {
+						font-size: 1.1rem;
+						margin-left : .25rem;
+					}
+				}
+
+				p {
+					font-size : 1.2rem;
+				}
+			}
+
+			button {
+				width : 90%;
+				display: block;
+				margin-top : .75rem;
+				margin-bottom: .75rem;
+				justify-items: flex-end;
+				margin-left: 1rem;
+				padding : 1rem;
+				border-radius: 2rem;
+				color: var(--Pale-blue);
+				background-color: var(--Dark-gray-blue);
+				border: none;
+				font-size : 1rem;
+				font-weight: 700;
+				cursor: pointer;
+			}
 		}
 	}
 </style>
